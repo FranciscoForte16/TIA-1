@@ -28,10 +28,10 @@ write('"b." - 1'),nl,
 write('"c." - 2'),nl,
 write('"d." - mais de 2'),nl,nl,
 write('A sua opcao: '),read(Adulto),(
-(Adulto == a), assert(fact(nenhum_adulto)),pergunta5(User);
-(Adulto == b), assert(fact(um_adulto)),pergunta5(User);
-(Adulto == c), assert(fact(dois_adultos)),pergunta5(User);
-(Adulto == d), assert(fact(mais_de_dois_adultos)),pergunta5(User)).
+(Adulto == a), assert(fact(nenhuma_pessoa)),pergunta5(User);
+(Adulto == b), assert(fact(uma_pessoa)),pergunta5(User);
+(Adulto == c), assert(fact(duas_pessoas)),pergunta5(User);
+(Adulto == d), assert(fact(mais_de_duas_pessoas)),pergunta5(User)).
 
 pergunta7(User):-nl, write(' Quantos quartos necessita? '),nl, nl,
 write('"a." - 1'),nl,
@@ -46,4 +46,4 @@ write('A sua opcao: '),read(Quartos),(
 
 final(User):- nl, demo, nl, write('Obrigado pelas suas escolhas, '), write(User).
 
-result(P):- nl, findall(Y,(fact(P),solucao(Y,_,_,_,_,_,_,_,LP), member(P,LP)),L), write('Resultado:'), write(L).
+result(P):- nl, findall(Y,(fact(P),solucao(Y,_,_,_,LP), member(P,LP)),L), write('Resultado:'), write(L).
