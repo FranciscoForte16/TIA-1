@@ -22,7 +22,7 @@ write('A sua opcao: '),read(Preco),(
 (Preco == c), assert(fact(trezentos_quinhentos_euros)), pergunta4(User);
 (Preco == d), assert(fact(mais_quinhentos_euros)), pergunta4(User)).
 
-pergunta4(User):- nl, write(' Quantos adultos sao? '),nl, nl,
+pergunta4(User):- nl, write(' Quantas pessoas sao? '),nl, nl,
 write('"a." - 0'),nl,
 write('"b." - 1'),nl,
 write('"c." - 2'),nl,
@@ -32,24 +32,6 @@ write('A sua opcao: '),read(Adulto),(
 (Adulto == b), assert(fact(um_adulto)),pergunta5(User);
 (Adulto == c), assert(fact(dois_adultos)),pergunta5(User);
 (Adulto == d), assert(fact(mais_de_dois_adultos)),pergunta5(User)).
-
-pergunta5(User):-nl, write(' Quantas criancas sao? '),nl, nl,
-write('"a." - 0'),nl,
-write('"b." - 1'),nl,
-write('"c." - 2'),nl,
-write('"d." - mais de 2'),nl,nl,
-write('A sua opcao: '),read(Crianca),(
-(Crianca == a), assert(fact(nenhuma_crianca)),pergunta6(User);
-(Crianca == b), assert(fact(uma_crianca)),pergunta6(User);
-(Crianca == c), assert(fact(duas_criancas)),pergunta6(User);
-(Crianca == d), assert(fact(mais_de_duas_criancas)),pergunta6(User)).
-
-pergunta6(User):-nl, write(' Tem animais de estimacao? '),nl, nl,
-write('"a." - Sim'),nl,
-write('"b." - Nao'),nl, nl,
-write('A sua opcao: '),read(Animais),(
-(Animais == a), assert(fact(tem_animal)),pergunta8(User);
-(Animais == b), assert(fact(nao_tem_animal)),pergunta8(User)).
 
 pergunta7(User):-nl, write(' Quantos quartos necessita? '),nl, nl,
 write('"a." - 1'),nl,
@@ -61,20 +43,6 @@ write('A sua opcao: '),read(Quartos),(
 (Quartos == b), assert(fact(dois_quartos)),pergunta9(User);
 (Quartos == c), assert(fact(tres_quartos)),pergunta9(User);
 (Quartos == b), assert(fact(quatro_quartos)),pergunta9(User)).
-
-
-pergunta8(User):-nl, write(' Quantas camas necessita? '),nl, nl,
-write('"a." - 0'),nl,
-write('"b." - 1'),nl, nl,
-write('"c." - 2'), nl, nl,
-write('"d." - 3'), nl, nl,
-write('"e." - Mais de 3'), nl, nl,
-write('A sua opcao: '),read(Camas),(
-(Camas == a), assert(fact(nenhuma_cama)),final(User);
-(Camas == b), assert(fact(uma_cama)),final(User);
-(Camas == c), assert(fact(duas_camas)),final(User);
-(Camas == d), assert(fact(tres_camas)),final(User);
-(Camas == e), assert(fact(mais_de_3_camas)),final(User)).
 
 final(User):- nl, demo, nl, write('Obrigado pelas suas escolhas, '), write(User).
 
