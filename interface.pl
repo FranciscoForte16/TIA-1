@@ -11,16 +11,7 @@ pergunta1():-write('Qual e o seu nome?'), nl,nl, read(User), inf(User).
 
 inf(User):-nl, write(User), write(', de modo a ser mais facil encontrarmos o melhor alojamento para ti, escolhe a opcao mais conveniente a cada pergunta. '), nl, pergunta2(User).
 
-pergunta2(User):- nl, write(' O que procura? '),nl, nl,
-write('"a." - Um lugar para ficar'),nl,
-write('"b." - Uma estadia longa'),nl,
-write('"c." - Uma experiencia'),nl,
-write('A sua opcao: '),read(A),(
-(A == a), assert(fact(lugar_para_ficar)),pergunta3(User);
-(A == b), assert(fact(estadia_longa)),pergunta3(User);
-(A == c), assert(fact(experiencia)),pergunta3(User)).
-
-pergunta3(User):-nl, write( 'Qual e o preco que procura?' ),nl, nl,
+pergunta2(User):-nl, write( 'Qual e o preco que procura?' ),nl, nl,
 write('"a." - 0-100 euros por noite'), nl,
 write('"b." - 100-300 euros por noite'), nl,
 write('"c." - 300-500 euros por noite'), nl,
