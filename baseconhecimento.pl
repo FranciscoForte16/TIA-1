@@ -1,0 +1,1 @@
+if estadia_longa and zero_cem_euros and mais_de_dois_adultos and nenhuma_crianca and tem_animal and dois_quartos and duas_camas then casa1.
